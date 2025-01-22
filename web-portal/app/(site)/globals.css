@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+:root { 
+
+  --primary: #0C6AB0;
+  --primary-hover: #0092FF;
+  --white: #FFFFFF;
+  --grey: #A2A1A1;
+  --text: #000000;
+  --placeholder: #B8B8B8;
+  
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;  
+  height: 100vh;
+  margin: 0;  
+}

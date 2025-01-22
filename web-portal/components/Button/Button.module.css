@@ -1,0 +1,33 @@
+
+.button {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--primary);
+    padding: 19px 25px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    cursor: pointer;    
+    height: 100%;
+    width: 100%;
+    transition: background-color .3s;
+}
+
+.small {
+    max-width: 270px;
+    max-height: 65px;
+}
+
+.big {
+    max-width: 400px;
+    max-height: 100px;
+}
+
+.button:hover {
+    background-color: var(--primary-hover);
+}
+
