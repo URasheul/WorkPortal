@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root { 
@@ -11,6 +13,7 @@
   --text: #000000;
   --placeholder: #B8B8B8;
   
+  --button-disabled: #0C6AB080;
 
 }
 

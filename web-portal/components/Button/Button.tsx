@@ -4,11 +4,13 @@ import styles from "./Button.module.css";
 import cn from "classnames";
 
 
-export function Button({children, appearence = "small"} : ButtonProps): JSX.Element {
+export function Button({children, appearence = "small", disabled = false} : ButtonProps): JSX.Element {
 
+   
     return (
-        <button className={cn(styles.button, styles[appearence])}>
-            {children}
+        <button disabled={disabled} 
+        className={cn(styles.button, styles[appearence], {[styles.disabled] : disabled})}>
+        {children}
         </button>
     );
 }

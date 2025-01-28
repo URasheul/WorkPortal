@@ -5,9 +5,9 @@ import Link from "next/link";
 export default function Search() {
   return (
     <div className={styles.search}>
-        <Link className={styles.link} href={'/search/categories'}><Button>20871</Button></Link>
-        <Button>23870</Button>
-        <Button>20873</Button>   
+        <Button><Link className={styles.link} href={'/search/20871'}>20871</Link></Button>
+        <Button><Link className={styles.link} href={'/search/23870'}>23870</Link></Button>
+        <Button><Link className={styles.link} href={'/search/20873'}>20873</Link></Button>                
     </div>
   );
 }

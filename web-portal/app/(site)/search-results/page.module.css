@@ -1,0 +1,23 @@
+
+.hero {
+    max-width: 70vw;
+    width: 100%;
+    display: grid;
+    column-gap: 2px;
+    grid-template-columns: 65px 350px 1fr;
+    grid-template-rows: auto;
+    background-color: #7D7D7D;
+    justify-items: center;
+}
+
+.item {
+    font-size: 24px;    
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.itemPainted {
+    background-color: #0C6AB012;
+}

@@ -7,7 +7,6 @@
     border: none;
     border-radius: 15px;
     background-color: var(--primary);
-    padding: 19px 25px;
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;
@@ -31,3 +30,7 @@
     background-color: var(--primary-hover);
 }
 
+.disabled {
+    background-color: var(--button-disabled);
+    color: rgba(255, 255, 255, 0.5);
+}
