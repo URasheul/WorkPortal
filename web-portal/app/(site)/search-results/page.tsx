@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./page.module.css";
 import cn from "classnames";
 
@@ -10,21 +12,28 @@ const data = [
 
 export default function SearchResultMain() {
 
-    return (      
-        <div className={styles.hero}>      
-           <span className={cn(styles.item, styles.itemHeader)}>№</span>
-           <span className={cn(styles.item, styles.itemHeader)}>Обозначение</span>
-           <span className={cn(styles.item, styles.itemHeader)}>Наименование</span>
+    return (     
+      <div>     
+        <div className={styles.hero}>    
+          <div className={styles.heroItem}>
+            <span className={cn(styles.item, styles.itemHeader, styles.number)}>№</span>
+            <span className={cn(styles.item, styles.itemHeader, styles.name)}>Обозначение</span>
+            <span className={cn(styles.item, styles.itemHeader)}>Наименование</span>
+          </div>  
           {data.map(elem => {
             return (    
-              <>
-                <span className={styles.item}>{elem.id}</span>
-                <span className={styles.item}>{elem.docNumb}</span>
-                <span className={styles.item}>{elem.title}</span>            
-              </>             
+              <div key={elem.id} className={cn(styles.heroItem, styles.heroItemDoc, { [styles.itemPainted] : elem.id % 2 == 0})}>
+                <span className={cn(styles.item, styles.number, styles.docItem)}>{elem.id}</span>
+                <span className={cn(styles.item, styles.name, styles.docItem)}>{elem.docNumb}</span>
+                <span className={cn(styles.item, styles.docItem)}>{elem.title}</span>            
+              </div>            
           );
           })}
         </div>      
+        <div>
+
+        </div>  
+      </div> 
     );
   }
   

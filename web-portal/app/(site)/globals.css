@@ -11,7 +11,13 @@
   --white: #FFFFFF;
   --grey: #A2A1A1;
   --text: #000000;
+  --text-light: #757575;
   --placeholder: #B8B8B8;
+
+  --select-item: #FFCA004D;
+
+  --result-header: #00000012;
+  --result-header-text: #7D7D7D;
   
   --button-disabled: #0C6AB080;
 

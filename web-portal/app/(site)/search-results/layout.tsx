@@ -10,6 +10,8 @@ result
     result : React.ReactNode
 }>
 ){
+
+
     return (
         <div className={styles.layout}>
         {children}

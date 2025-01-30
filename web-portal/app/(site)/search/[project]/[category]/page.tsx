@@ -16,7 +16,6 @@ const docData = [
 export default async function Category({ params } : { params : { project: string, category : string }}) {
 
     const data = await params;
-    console.log(data);
     
     return (
         <div className={styles.project}>
