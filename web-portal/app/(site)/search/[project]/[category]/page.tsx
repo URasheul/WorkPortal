@@ -1,30 +1,48 @@
+'use client';
+
+import { AppDispatch } from "@/store/store";
 import styles from "./page.module.css";
 import { Button } from "@/components";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { setData } from "@/store/slices/SearchDataSlice/searchDataSlice";
 
 
 const docData = [
-    {id: 1, title: 'Корпус'},
-    {id: 2, title: 'Достройка'},
-    {id: 3, title: 'Судовые системы'},
-    {id: 4, title: 'Электроэнергетические системыро'},
-    {id: 5, title: 'Энергетическая установка'},
-    {id: 6, title: 'МСЧ'},
+    {id: 1, title: 'Корпус', alias: 'frame'},
+    {id: 2, title: 'Достройка', alias: 'completion'},
+    {id: 3, title: 'Судовые системы', alias: 'ship-systems'},
+    {id: 4, title: 'Электроэнергетические системы', alias: 'electric-power-systems'},
+    {id: 5, title: 'Энергетическая установка', alias: 'power-plant'},
+    {id: 6, title: 'МСЧ', alias: 'mech-eng-draw'},
 ];
 
 
-export default async function Category({ params } : { params : { project: string, category : string }}) {
+export default function Category() {
 
-    const data = await params;
-    
+    const dispatch = useDispatch<AppDispatch>();
+    const {project, category} = useParams<{project: string, category: string}>();
+
+    function saveData( project: string, category: string, subCategory: string) {        
+        dispatch(setData({project, category, subCategory}));
+    }
+
+       
     return (
         <div className={styles.project}>
-            <h1 className={styles.title}>{data.project}</h1>
+            <h1 className={styles.title}>{project}</h1>
             <div className={styles.categories}>
                 {docData.map(element => {
                     return (
-                        <Button appearence={"big"} key={element.id}>
-                            <Link href={`/search-results`} className={styles.link}>{element.title}</Link>
+                        <Button 
+                        appearence={"big"} 
+                        key={element.id} 
+                        >
+                            <Link onClick={() => {
+                            saveData(project, category, element.alias);
+                            console.log('dispatch category');
+                            }} href={{pathname : `/search-results`}} className={styles.link}>{element.title}</Link>
                         </Button>
                     );
                 })}

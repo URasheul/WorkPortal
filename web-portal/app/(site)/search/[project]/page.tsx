@@ -25,15 +25,11 @@ export default async function Project({ params }:{params : { project : string}})
                     {categoryData.map(element => {
                         return (
                             <Button appearence={"big"} key={element.id}>
-                                <Link href={`/search/${data}/${element.alias}`} className={styles.link}>{element.title}</Link>
+                                <Link href={`/search/${data}/${element.alias}`} className={styles.link}>{element.title}
+                                </Link>
                             </Button>
                         );
                     })}
-                    {/* <Button appearence={"big"}><Link href={`/search/${data}/tech`} className={styles.link}>Технический проект</Link></Button>
-                    <Button appearence={"big"}><Link href={`/search/${data}/tech`} className={styles.link}>Рабочая конструкторская документация</Link></Button>
-                    <Button appearence={"big"}><Link href={`/search/${data}/tech`} className={styles.link}>Приемо-сдаточная документация</Link></Button>
-                    <Button appearence={"big"}><Link href={`/search/${data}/tech`} className={styles.link}>Эксплуатационная документация</Link></Button>
-                    <Button appearence={"big"}><Link href={`/search/${data}/tech`} className={styles.link}>Договорная документация</Link></Button> */}
                 </div>
             </div>
         );
