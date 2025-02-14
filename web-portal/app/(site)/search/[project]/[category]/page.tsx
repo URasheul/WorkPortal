@@ -41,7 +41,6 @@ export default function Category() {
                         >
                             <Link onClick={() => {
                             saveData(project, category, element.alias);
-                            console.log('dispatch category');
                             }} href={{pathname : `/search-results`}} className={styles.link}>{element.title}</Link>
                         </Button>
                     );

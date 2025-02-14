@@ -1,19 +1,17 @@
-'use client';
-
-import { DocumentList } from "@/components";
-import { RootState } from "@/store/store";
-import { useSelector } from "react-redux";
+import ResultData from "@/components/ResultData/ResultData";
 
 
-export default function SearchResultMain() { 
 
-  const state = useSelector<RootState>((s) => s.searchData);  
-    console.log(state);
-    
+export default async function SearchResultMain({ searchParams } : {searchParams : Promise<{[key : string] : string | string[] | undefined}>}) { 
+
+  const data = await searchParams;
+  console.log(data);
+   
   
   return (
     <div>
-      <DocumentList data={[]}/>
+      Results
+      <ResultData id={'1'}/>
     </div>
   );
 

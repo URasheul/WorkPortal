@@ -7,19 +7,16 @@ import { store } from "@/store/store";
 
 
 export default function SearchResultsLayout({
-children,
-result
+children
 } : Readonly <{
-    children : React.ReactNode,
-    result : React.ReactNode
+    children : React.ReactNode
 }>
 ){
        
     return (
         <Provider store={store}>            
             <div className={styles.layout}>
-            {children}
-            {result}
+            {children}            
             </div>       
         </Provider>
     );

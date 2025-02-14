@@ -1,10 +1,11 @@
 import { IDocument} from "@/interfaces/doc.interfaces";
 
-export async function getData() {
+export async function getDocumetById(id: string) {
+
     const data = await new Promise<string>((res) => {
         setTimeout(() => {
-            res("Данные получены");
-        }, 2000);
+            res(`Данные с id:${id} получены`);
+        }, 3000);
     });
 
     return data;
