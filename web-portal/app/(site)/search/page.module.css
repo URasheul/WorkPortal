@@ -1,0 +1,17 @@
+.search {     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100%; 
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;    
+}
