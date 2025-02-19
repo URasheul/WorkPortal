@@ -1,12 +1,13 @@
+'use client';
 
 import styles from "./DocumentList.module.css";
 import cn from "classnames";
 import { DocumentListProps } from "./DocumentList.props";
 
 
-export function DocumentList({data} : DocumentListProps) {  
-  
-   
+export function DocumentList({data, onClick} : DocumentListProps) {  
+
+
     return (    
        
       <div>     
@@ -16,12 +17,13 @@ export function DocumentList({data} : DocumentListProps) {
             <span className={cn(styles.item, styles.itemHeader, styles.name)}>Обозначение</span>
             <span className={cn(styles.item, styles.itemHeader)}>Наименование</span>
           </div>  
-          {data.map(elem => {
+          {data.map((elem, ind) => {
             return (    
               <div key={elem.id} 
-              className={cn(styles.heroItem, styles.heroItemDoc, { [styles.itemPainted] : elem.id % 2 == 0})}
+              className={cn(styles.heroItem, styles.heroItemDoc, {[styles.itemPainted] : elem.id % 2 == 0})}
+              onClick={() => onClick(elem.id)}
               >
-                <span className={cn(styles.item, styles.number, styles.docItem)}>{elem.id}</span>
+                <span className={cn(styles.item, styles.number, styles.docItem)}>{ind+1}</span>
                 <span className={cn(styles.item, styles.name, styles.docItem)}>{elem.docNumb}</span>
                 <span className={cn(styles.item, styles.docItem)}>{elem.title}</span>            
               </div>            

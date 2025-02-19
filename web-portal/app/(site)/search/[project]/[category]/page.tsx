@@ -39,9 +39,11 @@ export default function Category() {
                         appearence={"big"} 
                         key={element.id} 
                         >
-                            <Link onClick={() => {
-                            saveData(project, category, element.alias);
-                            }} href={{pathname : `/search-results`}} className={styles.link}>{element.title}</Link>
+                            <Link 
+                            href={{pathname : `/search-results`, 
+                            query : {project, category, subCategory: element.alias}}} 
+                            className={styles.link}>{element.title}
+                            </Link>
                         </Button>
                     );
                 })}
