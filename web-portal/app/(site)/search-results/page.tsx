@@ -31,12 +31,11 @@ export default function SearchResultMain({ searchParams } : {searchParams : Prom
   function onItemClick(id: number) {
     setSelectedItem(id);
   }
- 
-  
+   
   return (    
     <>   
       <DocumentList data={documentsData} onClick={onItemClick}/>
-      {seletedItem && <span>{`Выбран элемент с номером: ${seletedItem}`}</span>}
+      {seletedItem && <ResultData id={`${seletedItem}`}/>}
     </>
   );
 

@@ -1,13 +1,16 @@
 import { IDocument} from "@/interfaces/doc.interfaces";
 import { DOCUMENT_LIST } from "./db";
 
-export async function getDocumetById(id: string) {
+export async function getDocumetById(id: string){
 
-    const data = await new Promise<string>((res) => {
-        setTimeout(() => {
-            res(`Данные с id:${id} получены`);
-        }, 3000);
-    });
+    
+    const data = {
+        title: 'Название',
+        description: '22222.222222.2222.22',
+        date: '2025-01-01',
+        status: 'Согласован',
+        file: `Документ с id: ${id} загружен`
+    };
 
     return data;
 };

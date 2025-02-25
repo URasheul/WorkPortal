@@ -1,9 +1,7 @@
-
 .result {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 500px;
     padding: 20px;
 }
 
@@ -14,15 +12,15 @@
 }
 
 .label {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    color: var(--text-light);
-}
-
-.title {
+    color: var(--text-light) ;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
 }
 
+.text {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
