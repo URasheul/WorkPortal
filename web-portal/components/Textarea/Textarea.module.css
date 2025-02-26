@@ -1,0 +1,12 @@
+
+.textarea {
+    background-color: transparent;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    resize: none;   
+    padding: 6px 20px;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+}

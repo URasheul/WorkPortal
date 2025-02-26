@@ -4,4 +4,5 @@ export * from "./NavBar/NavBar";
 export * from "./DocumentList/DocumentList";
 export * from "./InputList/InputList";
 export * from "./ResultData/ResultData";
+export * from "./Textarea/Textarea";
 
