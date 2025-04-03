@@ -28,10 +28,14 @@ export default function Category() {
         dispatch(setData({project, category, subCategory}));
     }
 
+    
        
     return (
         <div className={styles.project}>
-            <h1 className={styles.title}>{project}</h1>
+            <div className={styles.header}>
+                <h1 className={styles.title}>{category}</h1>
+                <h1 className={styles.title}>{project}</h1>
+            </div>
             <div className={styles.categories}>
                 {docData.map(element => {
                     return (

@@ -2,7 +2,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 50px;    
 }
 
 .inputWrapper {
@@ -12,12 +12,26 @@
     align-items: center;
 }
 
+
 .input {
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
     border-radius: 10px; 
     padding: 10px 15px; 
+    max-width: 100px;
+}
+
+.inputDisabled {
+    border: none;
+}
+
+.inputDocNumber {
+    max-width: 200px;
+}
+
+.chekbox {
+    max-width: fit-content;
 }
 
 .label {  
@@ -28,7 +42,38 @@
     justify-self: end;  
 }
 
+.documentState {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-self: start;
+}
+
+.radioLabel {
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.radio {
+    padding: 0;
+    max-width: fit-content;
+    cursor: pointer;
+}
+
 .labelTextarea {
     padding-top: 10px;
     align-self: start;
+}
+
+.textarea{
+    max-width: 50%;
+}
+
+.submit{
+    align-self: center;
+    min-height: 65px;
 }

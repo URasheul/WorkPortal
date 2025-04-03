@@ -4,9 +4,10 @@ import { InputProps } from "./Input.props";
 import cn from "classnames";
 
 
-export function Input({placeholder, className, ...props} : InputProps): JSX.Element {
+export function Input({placeholder, className, type = "text", ...props} : InputProps): JSX.Element {
+
 
     return (
-        <input {...props} type="text" className={cn(styles.input, className)} placeholder={placeholder}/>
+        <input {...props} type={type} className={cn(styles.input, className)} placeholder={placeholder}/>
     );
 }
